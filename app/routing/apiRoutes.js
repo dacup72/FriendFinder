@@ -1,56 +1,39 @@
-var friends = require("../data/friends");
-var characters = require("../data/characters");
+var friends = require("../data/friends.js");
 
-module.exports = function(app) {
-
-  app.get("/api/friends", function(req, res) {
-    res.json(friends);
+module.exports = function (app){
+  app.get("/api/friends", function(req, res){
+      res.json(friends);
   });
-
-  app.get("/api/characters", function(req, res) {
-    res.json(characters);
-  });
-
-  app.post("/api/friends", function(req, res) {
-
-
-      //object constructor for the best match
+  
+  app.post("/api/friends", function(req, res){
       var bestFriend = {
-        name: "",
-        photo: "",
-        description: "",
-        friendDifference: 1000
-      }
+          name:"",
+          photo:"",
+          Difference: Infinity
+      };
 
-      var totalDifference = 0;
-      var characterDifference = 0;
       var userData = req.body;
-      var userScores = userData.scores;
+      var Scores = userData.scores;
+      var totalDifference;   
 
-      for (i = 0; i < characters.length; i++) {
-        totalDifference = 0;
-
-        for (x = 0; x < characters[i].scores.length; x++) {
-          totalDifference += Math.abs(parseInt(userScores[x]) - parseInt(characters[i].scores[x]));
-        }
-        console.log("Character Name: ", characters[i].name, "Total Score: ", totalDifference);
-
-        if (totalDifference <= bestFriend.friendDifference) {
-          bestFriend.name = characters[i].name;
-          bestFriend.photo = characters[i].photo;
-          bestFriend.description = characters[i].description;
-          bestFriend.sound = characters[i].sound;
-          bestFriend.friendDifference = totalDifference;
-
-          console.log("The new best match is " + bestFriend.name + " with a friend score of: " + totalDifference + "\n");
-
-        } else {
-          console.log(characters[i].name + " is not your best friend\n")
-        }
+      for (var i = 0; i < friends.length; i++){
+          var currentbestie = friends[i];
+          totalDifference = 0;
+           
+          // console.log(currentbestie.name);
+          
+          for (var k = 0; k < currentbestie.scores.length; k++){
+              var currentbestiescore = currentbestie.scores[k];
+              var currentUserScore = Scores[k];
+              totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentbestiescore));
+          }
+          if (totalDifference <= bestFriend.Difference){
+              bestFriend.name = currentbestie.name;
+              bestFriend.photo = currentbestie.photo;
+              bestFriend.Difference = totalDifference;
+          }
       }
-      friends.push(userData);
+      friends.push(userData);  
       res.json(bestFriend);
-      console.log(bestFriend);
-      console.log("==========================");
   });
 };

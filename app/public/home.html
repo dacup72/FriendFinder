@@ -8,6 +8,9 @@
   <!-- Materialize Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">  
+
   <!-- links style sheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -18,24 +21,26 @@
 
 <body>
   <div class="container">
+
     <div class="jumbotron">
-      <h1><span>Friend Finder</span></h1>
+      <h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i>Friend Finder</h1>
       <hr>
       <h4><span>Complete the survey and find your match!</h4>
-      </div>
-      <div class="textcenter">
-        <a href="/survey"><div class="btn btn-lg btn-primary">Take Survey</div>
-        </div>
-      </div>
-      <div>
-        <br>
-        <div class="container">
-          <span>
-            <a href="/survey"> Survey</a> |
-            <a href="/api/friends"> Friends</a> |
-            <a href="https://github.com/dacup72/FriendFinder"> Github Repo</a>
-          </span>
-        </div>
-      </div>
-    </body>
-    </html>
+    </div>
+
+    <div>
+       <a href="/survey"><div class="btn btn-lg btn-primary">Take Survey</div>
+    </div>
+    
+  </div>
+
+  <br>
+
+  <footer>
+    <div class="container">
+      <p><a href="/api/friends"> Friends API List </a></p>  
+    </div>
+  </footer>
+
+</body>
+</html>
