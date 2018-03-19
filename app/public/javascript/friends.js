@@ -12,7 +12,13 @@ $("#submit").on("click", function(event) {
       }
     });
 
-    
+    $(".chosen-select").each(function() {
+
+      if ($(this).val() === "") {
+        isValid = false;
+      }
+    });
+    return isValid;
   }
 
   
