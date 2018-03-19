@@ -1,6 +1,6 @@
 var friends = [
 {
-  "name":"Tyrion",
+  "name":"Tyrion Mystery",
   "photo":"https://pbs.twimg.com/profile_images/668279339838935040/8sUE9d4C.jpg",
   "scores": [
   1,
@@ -16,7 +16,7 @@ var friends = [
   ]
 },
 {
-  "name": "John",
+  "name": "Master Chief",
   "photo": "http://static.comicvine.com/uploads/original/2/25258/2581525-the_master_chief_halo_547518_283_330.jpg",
   "scores": [
   5,
@@ -32,7 +32,7 @@ var friends = [
   ]
 },
 {
-  "name": "Michael",
+  "name": "Michael Scott",
   "photo": "http://az616578.vo.msecnd.net/files/2017/02/24/636235724447059178-1587327007_635850666044049549-639116436_Michael-in-Branch-Closing-michael-scott-1468612-1280-720.jpg",
   "scores": [
   3,
@@ -48,7 +48,7 @@ var friends = [
   ]
 },
 {
-  "name": "SpongeBob",
+  "name": "SpongeBob Squarepants",
   "photo": "http://nick.mtvnimages.com/nick/video/images/nick/spongebob-050-full-episode-16x9.jpg?quality=0.60",
   "scores": [
   5,
