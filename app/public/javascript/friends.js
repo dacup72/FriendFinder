@@ -21,9 +21,7 @@ $("#submit").on("click", function(event) {
     return isValid;
   }
 
-  // If all required fields are filled
   if (validateForm()) {
-    // Create an object for the user"s data
     var userData = {
       name: $("#name").val(),
       photo: $("#photo").val(),
@@ -41,6 +39,12 @@ $("#submit").on("click", function(event) {
       ]
     };
 
+    // AJAX post the data to the friends API.
+    $.post("/api/friends", userData, function(data) {
     
+
+    });
+  } else {
+    alert("Please fill out all fields before submitting!");
   }
 });
