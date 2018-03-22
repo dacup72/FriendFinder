@@ -23,19 +23,19 @@ for (var selector in config) {
 
 
 // Submit button
-$("#submit").on("click", function(event) {
+$("#submit").on("click", function (event) {
   event.preventDefault();
 
   // Form validation
   function validateForm() {
     var isValid = true;
-    $(".form-control").each(function() {
+    $(".form-control").each(function () {
       if ($(this).val() === "") {
         isValid = false;
       }
     });
 
-    $(".chosen-select").each(function() {
+    $(".chosen-select").each(function () {
 
       if ($(this).val() === "") {
         isValid = false;
@@ -63,7 +63,7 @@ $("#submit").on("click", function(event) {
     };
 
     // AJAX post the data to the friends API.
-    $.post("/api/friends", userData, function(data) {
+    $.post("/api/friends", userData, function (data) {
       $("#match-name").text(data.name);
       $("#match-img").attr("src", data.photo);
 
