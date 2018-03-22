@@ -41,7 +41,10 @@ $("#submit").on("click", function(event) {
 
     // AJAX post the data to the friends API.
     $.post("/api/friends", userData, function(data) {
-    
+      $("#match-name").text(data.name);
+      $("#match-img").attr("src", data.photo);
+
+      $("#results-modal").modal("toggle");
 
     });
   } else {
