@@ -1,6 +1,6 @@
 var friends = [
 {
-  "name":"Tyrion Mystery",
+  "name":"Tyrion Lannister",
   "photo":"https://pbs.twimg.com/profile_images/668279339838935040/8sUE9d4C.jpg",
   "scores": [
   1,

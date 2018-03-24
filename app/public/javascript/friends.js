@@ -19,12 +19,13 @@ for (var selector in config) {
   $(selector).chosen(config[selector]);
 }
 
-
+console.log("javascript loaded");
 
 
 // Submit button
 $("#submit").on("click", function (event) {
   event.preventDefault();
+  console.log("working");
 
   // Form validation
   function validateForm() {
