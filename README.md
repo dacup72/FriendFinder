@@ -1,4 +1,4 @@
-Live Project: https://dashboard.heroku.com/apps/friend-finder-app2
+Live Project: https://friend-finder-app2.herokuapp.com/
 
 ### Friend Finder
 
