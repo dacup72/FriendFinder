@@ -1,4 +1,4 @@
-Live Project: https://dashboard.heroku.com/apps
+Live Project: https://dashboard.heroku.com/apps/friend-finder-app2
 
 ### Friend Finder
 
@@ -40,7 +40,6 @@ A step by step series of examples that tell you how to get a development env run
 
 ```
 * $ node server.js
-
 ```
 
 ## Built With
